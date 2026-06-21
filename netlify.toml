@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+
+[[redirects]]
+  from = "/index.html"
+  to = "/en/"
+  status = 302

@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.fxneurope.eu
+Sitemap: https://www.fxneurope.eu/sitemap.xml
+Sitemap: https://www.fxneurope.eu/sitemap.txt
