@@ -1989,8 +1989,8 @@ main h2,
 }
 
 @media (min-width: 981px) {
-  main > section:first-child h1,
-  main > section:first-child p {
+  main > section:first-child:not([class*="border-b"]) h1,
+  main > section:first-child:not([class*="border-b"]) p {
     max-width: 43rem !important;
   }
 }
@@ -2011,12 +2011,12 @@ main h2,
   }
 }
 
-/* FXN Europe hero minimal SVG artwork v31 */
-main section:first-child {
+/* FXN Europe hero minimal SVG artwork v31 — homepage only */
+main > section:first-child:not([class*="border-b"]) {
   min-height: 640px;
 }
 
-main section:first-child > .relative.mx-auto {
+main > section:first-child:not([class*="border-b"]) > .relative.mx-auto {
   max-width: 1180px;
   padding-right: min(48vw, 540px);
 }
@@ -2059,11 +2059,11 @@ main section:first-child > .relative.mx-auto {
 }
 
 @media (max-width: 960px) {
-  main section:first-child {
+  main > section:first-child:not([class*="border-b"]) {
     min-height: 760px;
   }
 
-  main section:first-child > .relative.mx-auto {
+  main > section:first-child:not([class*="border-b"]) > .relative.mx-auto {
     padding-right: 1.25rem;
     padding-bottom: 22rem;
   }
@@ -2076,11 +2076,11 @@ main section:first-child > .relative.mx-auto {
 }
 
 @media (max-width: 520px) {
-  main section:first-child {
+  main > section:first-child:not([class*="border-b"]) {
     min-height: 720px;
   }
 
-  main section:first-child > .relative.mx-auto {
+  main > section:first-child:not([class*="border-b"]) > .relative.mx-auto {
     padding-bottom: 18rem;
   }
 
@@ -2088,4 +2088,51 @@ main section:first-child > .relative.mx-auto {
     bottom: 2rem !important;
     width: min(92vw, 350px) !important;
   }
+}
+
+/* FXN Europe v32: inner page headers + contact form typography */
+main > section:first-child[class*="border-b"] {
+  min-height: auto !important;
+}
+
+main > section:first-child[class*="border-b"] > .relative.mx-auto {
+  max-width: var(--container-site) !important;
+  padding-right: 1.25rem !important;
+  padding-top: clamp(3rem, 6vw, 4.5rem) !important;
+  padding-bottom: clamp(3rem, 6vw, 4.5rem) !important;
+}
+
+@media (max-width: 960px) {
+  main > section:first-child[class*="border-b"] > .relative.mx-auto {
+    padding-bottom: clamp(3rem, 6vw, 4.5rem) !important;
+  }
+}
+
+main form label {
+  font-family: var(--font-urbanist), Urbanist, sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+}
+
+main form input,
+main form textarea,
+main form select {
+  font-family: var(--font-outfit), Outfit, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+main form button[type="submit"] {
+  font-family: var(--font-outfit), Outfit, sans-serif !important;
+  font-size: 0.9375rem !important;
+  font-weight: 600 !important;
+}
+
+main .space-y-8 h2 {
+  font-family: var(--font-urbanist), Urbanist, sans-serif !important;
+}
+
+main .space-y-8 .text-lg {
+  font-family: var(--font-outfit), Outfit, sans-serif !important;
 }
