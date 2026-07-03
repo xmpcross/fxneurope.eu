@@ -2136,3 +2136,14 @@ main .space-y-8 h2 {
 main .space-y-8 .text-lg {
   font-family: var(--font-outfit), Outfit, sans-serif !important;
 }
+
+@media (max-width: 640px) {
+  main > section:first-child[class*="border-b"] {
+    min-height: auto !important;
+    border-radius: 0 !important;
+  }
+
+  main > section:first-child[class*="border-b"] > .relative.mx-auto {
+    padding: clamp(3rem, 6vw, 4.5rem) 1.25rem !important;
+  }
+}

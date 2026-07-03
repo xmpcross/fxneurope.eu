@@ -3131,3 +3131,61 @@ main section:first-child + section.border-b.bg-paper > div > div > div:last-chil
 .fxn-focus-lottie::before {
   background-image: url("/img/focus-coding-screen.svg?v=4") !important;
 }
+
+/* FXN Europe v32: inner page headers + contact form typography */
+main > section:first-child[class*="border-b"] {
+  min-height: auto !important;
+}
+
+main > section:first-child[class*="border-b"] > .relative.mx-auto {
+  max-width: var(--container-site) !important;
+  padding-right: 1.25rem !important;
+  padding-top: clamp(3rem, 6vw, 4.5rem) !important;
+  padding-bottom: clamp(3rem, 6vw, 4.5rem) !important;
+}
+
+@media (max-width: 960px) {
+  main > section:first-child[class*="border-b"] > .relative.mx-auto {
+    padding-bottom: clamp(3rem, 6vw, 4.5rem) !important;
+  }
+}
+
+main form label {
+  font-family: var(--font-urbanist), Urbanist, sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+}
+
+main form input,
+main form textarea,
+main form select {
+  font-family: var(--font-outfit), Outfit, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+main form button[type="submit"] {
+  font-family: var(--font-outfit), Outfit, sans-serif !important;
+  font-size: 0.9375rem !important;
+  font-weight: 600 !important;
+}
+
+main .space-y-8 h2 {
+  font-family: var(--font-urbanist), Urbanist, sans-serif !important;
+}
+
+main .space-y-8 .text-lg {
+  font-family: var(--font-outfit), Outfit, sans-serif !important;
+}
+
+@media (max-width: 640px) {
+  main > section:first-child[class*="border-b"] {
+    min-height: auto !important;
+    border-radius: 0 !important;
+  }
+
+  main > section:first-child[class*="border-b"] > .relative.mx-auto {
+    padding: clamp(3rem, 6vw, 4.5rem) 1.25rem !important;
+  }
+}
